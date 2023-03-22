@@ -208,6 +208,7 @@ body a {
   width: 55%;
   height: calc(100vh - 5.4rem);
   transition: 300ms;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .header__wrapper .navigation.open {
   left: 0;
@@ -218,7 +219,7 @@ body a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .header__wrapper .navigation .soc__icon ul {
   display: flex;
@@ -266,16 +267,19 @@ body a {
 .header__wrapper .wonder .time {
   position: absolute;
   top: 20rem;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   right: 0;
   background-color: #ffffff;
   width: 51%;
   height: 15rem;
   transition: 300ms;
+  box-shadow: inset rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .header__wrapper .wonder .time.open {
   top: 5.4rem;
-  display: unset;
+  opacity: 1;
+  visibility: visible;
 }
 .header__wrapper .wonder .time .main__time {
   padding: 1.5rem;
