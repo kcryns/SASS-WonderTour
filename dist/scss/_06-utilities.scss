@@ -46,8 +46,8 @@ $alignments:(
 }
 
 
-@for $i from 1 through 20{
-    .ml--#{$i}{
-        margin-left: $i +rem ;
-    }
-}
+// @for $i from 1 through 20{
+//     .ml--#{$i}{
+//         margin-left: $i +rem ;
+//     }
+// }
