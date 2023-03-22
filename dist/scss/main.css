@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap");
+/*-----color----*/
+/*-----BREAKPOINT----*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body {
+  font-family: "Nunito", helvetica sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  position: relative;
+}
+body a {
+  color: #000000;
+}
+
+.container {
+  width: 100%;
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--justify {
+  text-align: justify;
+}
+
+.d--flex {
+  display: flex;
+}
+
+.d--block {
+  display: block;
+}
+
+.d--inline-block {
+  display: inline-block;
+}
+
+.d--none {
+  display: none;
+}
+
+.bg--primary {
+  background: #01B3A7;
+}
+
+.text--primary {
+  color: #01B3A7;
+}
+
+.bg--dark {
+  background: #000000;
+}
+
+.text--dark {
+  color: #000000;
+}
+
+.bg--light {
+  background: #ffffff;
+}
+
+.text--light {
+  color: #ffffff;
+}
+
+.ml--1 {
+  margin-left: 1rem;
+}
+
+.ml--2 {
+  margin-left: 2rem;
+}
+
+.ml--3 {
+  margin-left: 3rem;
+}
+
+.ml--4 {
+  margin-left: 4rem;
+}
+
+.ml--5 {
+  margin-left: 5rem;
+}
+
+.ml--6 {
+  margin-left: 6rem;
+}
+
+.ml--7 {
+  margin-left: 7rem;
+}
+
+.ml--8 {
+  margin-left: 8rem;
+}
+
+.ml--9 {
+  margin-left: 9rem;
+}
+
+.ml--10 {
+  margin-left: 10rem;
+}
+
+.ml--11 {
+  margin-left: 11rem;
+}
+
+.ml--12 {
+  margin-left: 12rem;
+}
+
+.ml--13 {
+  margin-left: 13rem;
+}
+
+.ml--14 {
+  margin-left: 14rem;
+}
+
+.ml--15 {
+  margin-left: 15rem;
+}
+
+.ml--16 {
+  margin-left: 16rem;
+}
+
+.ml--17 {
+  margin-left: 17rem;
+}
+
+.ml--18 {
+  margin-left: 18rem;
+}
+
+.ml--19 {
+  margin-left: 19rem;
+}
+
+.ml--20 {
+  margin-left: 20rem;
+}
+
+.btn {
+  background-color: #01B3A7;
+  padding: 0.6rem 1.8rem;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  transition: 300ms;
+}
+
+.outlineprimary {
+  background-color: transparent;
+  border: 2px solid #01B3A7;
+}
+
+.header {
+  position: relative;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+}
+.header__wrapper .toggle__burger {
+  cursor: pointer;
+}
+.header__wrapper .toggle__burger span {
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: #2D394B;
+  display: block;
+}
+.header__wrapper .toggle__burger span:nth-child(2) {
+  margin: 6px 0;
+}
+.header__wrapper .navigation {
+  position: absolute;
+  background-color: #ffffff;
+  top: 5.4rem;
+  left: -55%;
+  width: 55%;
+  height: calc(100vh - 5.4rem);
+  transition: 300ms;
+}
+.header__wrapper .navigation.open {
+  left: 0;
+}
+.header__wrapper .navigation .soc__icon {
+  background-color: #ffffff;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.header__wrapper .navigation .soc__icon ul {
+  display: flex;
+}
+.header__wrapper .navigation .soc__icon ul li {
+  margin: 0 1rem;
+  font-size: 1.8rem;
+}
+.header__wrapper .navigation .header__nav {
+  margin-top: 3rem;
+}
+.header__wrapper .navigation .header__nav ul li {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  margin-bottom: 0.5rem;
+}
+.header__wrapper .navigation .header__nav ul li.active {
+  background-color: #01B3A7;
+}
+.header__wrapper .navigation .header__nav ul li:hover {
+  background-color: #01B3A7;
+}
+.header__wrapper .wonder {
+  width: 100%;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__wrapper .wonder .toggle__dot {
+  cursor: pointer;
+}
+.header__wrapper .wonder .toggle__dot span {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: #2D394B;
+  display: block;
+}
+.header__wrapper .wonder .toggle__dot span:nth-child(2) {
+  margin: 3px 0;
+}
+.header__wrapper .wonder .time {
+  position: absolute;
+  top: 20rem;
+  display: none;
+  right: 0;
+  background-color: #ffffff;
+  width: 51%;
+  height: 15rem;
+  transition: 300ms;
+}
+.header__wrapper .wonder .time.open {
+  top: 5.4rem;
+  display: unset;
+}
+.header__wrapper .wonder .time .main__time {
+  padding: 1.5rem;
+  display: block;
+}
+.header__wrapper .wonder .time .main__time .clock {
+  display: flex;
+  align-items: center;
+}
+.header__wrapper .wonder .time .main__time .clock i {
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+.header__wrapper .wonder .time .main__time .clock:nth-child(2) {
+  margin: 1.3rem 0;
+}
+.header__wrapper .wonder .time .main__time .btn {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}/*# sourceMappingURL=main.css.map */

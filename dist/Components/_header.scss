@@ -1,0 +1,125 @@
+// HEADER
+.header{
+    position: relative;
+    background: $clr-light;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        .toggle__burger{
+            cursor: pointer;
+            span{
+                width: 2.5rem;
+                height: .3rem;
+                background-color: $clr-secondary;
+                display: block;
+                &:nth-child(2){
+                    margin: 6px 0;
+                }
+            }
+        }
+        .navigation{
+            position: absolute;
+            background-color: $clr-light;
+            top: 5.4rem;
+            left: -55%;
+            width: 55%;
+            height: calc(100vh - 5.4rem);
+            transition: 300ms;
+            &.open{
+                left: 0;
+            }
+            .soc__icon{
+                background-color: $clr-light;
+                height:8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid rgb(0,0,0,.3);
+                ul{
+                    display: flex;
+                    li{
+                        margin: 0 1rem;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+            .header__nav{
+                margin-top: 3rem;
+                ul{
+                    li{
+                        padding: 0 2rem;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 2rem;
+                        margin-bottom: .5rem;
+                        &.active{
+                            background-color: $clr-primary;
+                        }
+                        &:hover{
+                            background-color: $clr-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .wonder{
+            width: 100%;
+            margin-left: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .toggle__dot{
+                cursor: pointer;
+                span{
+                    width: .6rem;
+                    height: .6rem;
+                    border-radius: 50%;
+                    background-color: $clr-secondary;
+                    display: block;
+                    &:nth-child(2){
+                        margin: 3px 0;
+                    }
+                }
+                
+            }
+            .time{
+                position: absolute;
+                top: 20rem;
+                display: none;
+                right: 0;
+                background-color: $clr-light;
+                width: 51%;
+                height: 15rem;
+                transition: 300ms;
+                &.open{
+                    top: 5.4rem;
+                    display: unset;
+                }
+               
+                .main__time{
+                    padding: 1.5rem;
+                    display: block;
+                    
+                    .clock{
+                        display: flex;
+                        align-items: center;
+                       
+                        i{
+                            margin-right: 2rem;
+                            font-size: 2rem;
+                        }
+                        &:nth-child(2){
+                            margin: 1.3rem 0;
+                        }
+                    }
+                    .btn{
+                        width: 100%;
+                        text-align: center;
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+}

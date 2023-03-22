@@ -1,0 +1,11 @@
+.btn{
+    background-color: $clr-primary;
+    padding: .6rem 1.8rem;
+    border: 1px solid $clr-light;
+    display: inline-block;
+    transition: 300ms;
+}
+.outlineprimary{
+    background-color: transparent;
+    border: 2px solid $clr-primary;
+}
