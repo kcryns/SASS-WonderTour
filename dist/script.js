@@ -13,6 +13,4 @@ toggle__dot.classList.remove("open");
 toggle__dot.addEventListener("click", () => {
 toggle__dot.classList.toggle("open");
 time.classList.toggle("open");
-navigation.classList.remove("open");
-toggle__burger.classList.remove("open");
 })
