@@ -1,0 +1,102 @@
+.banner{
+    #two{
+        background-image: url(../img/pic1.jpg);
+    }
+    #three{
+        background-image: url(../img/pic2.jpg);
+    }
+.main__banner{
+    height: calc(100vh - 5.4rem);
+    background-image: url(../img/pic3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    &__wrapper{
+        height: 100%;
+        margin-top: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text{
+        color: $clr-light;
+        p{
+            font-size: 2rem;
+            font-weight: 600;
+            max-width: 45rem;
+        }
+        h2{
+            font-weight: normal;
+            font-size: 4.3rem;
+            margin: 2rem 0;
+        }
+        a{
+           padding: 1.5rem 2.5rem; 
+           position: relative;
+           
+           span{
+            z-index: 1;
+            position: relative;                    
+        }
+        &:hover{
+            color: $clr-light;
+            border: 2px solid #51BB88;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 19%;
+            width: 60%;
+            height: 100%;
+            background:#51BB88; 
+            visibility: hidden;
+            opacity: 0;
+            transition: 300ms;
+          }
+          &:hover:after{
+            width: 100%;
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+    }
+    .sliderbtn{
+        span{
+            height: 1.5rem;
+            width: 1.5rem;
+            background-color: #C7C6C6;
+            display: block;
+            &.active{
+                background-color: $clr-primary;
+            }
+            &:nth-child(2)
+            {
+                margin: 1rem 0;
+            }
+        }
+    }
+   
+}
+.tns-outer{
+    button{
+        display: none;
+    }
+}
+@include mediaQuery($break-lg){
+
+.main__banner{
+    height: 75rem;
+    &__wrapper{
+        margin-top: 25%;
+        p{
+            max-width: unset;
+        }
+        h2{
+            font-size: 6rem;
+        }
+}
+}
+}
+}

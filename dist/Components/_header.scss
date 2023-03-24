@@ -3,6 +3,7 @@
     position: relative;
     background: $clr-light;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 99;
     &__wrapper{
         display: flex;
         align-items: center;
@@ -78,17 +79,28 @@
                 
                 &__ul{
                     li{
-                        padding: 0 2rem;
-                        padding: 2rem;
+                        cursor: pointer;
                         margin-bottom: .5rem;
                         .li__head{
                             display: flex;
                             justify-content: space-between;
+                            padding: 2rem;
+                            i{
+                                transition: 300ms;
+                            }
                         }
                         &.active{
-                            background-color: $clr-primary;
+                            background-color: $clr-primary;                        
                             a{
                                 color: $clr-light;
+                            }
+                            i{
+                                color: $clr-light;
+                                
+                                &.open{
+                                    transform: rotate(180deg);
+                                    transition: 300ms;
+                                }
                             }
                         }
                         &:hover{
@@ -101,23 +113,48 @@
                                 color: $clr-light;
                             }
                         }
-
+                        
                     }
                 }
             }
-            .drop_down{
+            .drop{
                 max-height: 0;
                 overflow: hidden;
                 transition: 300ms;
+                width: 100%;
+                .page_head{
+                    margin: 1rem;
+                    border-bottom: 1px solid rgba(0, 0, 0, .2);
+                    h3{
+                        color: #51BB88;
+                        padding: 1.5rem 0;
+                        font-size: 2.1rem;
+                        font-weight: unset;
+                        letter-spacing: 3px;
+                    }
+                }
                 &.open{
-                    max-height: 100rem;
+                    max-height: 130rem;
                     transition: 300ms;
+                     background-color: $clr-light;           
+                   ul{
+                        li{
+                                                
+                        &:hover a{
+                            color: $clr-light;
+                        }
+                             a{
+                            color: $clr-dark;
+                             }
+                        }
+                  }
+                    
                 }
-                &.active{
-                    background-color: $clr-primary;
-                }
+
                 li{
-                    display: block;
+                    padding: 2rem;
+                    margin-top: .5rem;
+                    margin-bottom: unsets;
                     a{
                         margin-left: 2rem;
                     }
@@ -125,6 +162,9 @@
             }
             
         }
+        // .tourpic{
+        //     display: ;
+        // }
         .wonder{
             width: 100%;
             height: 2.4rem;
@@ -297,11 +337,15 @@
                 height: 3rem;
                 .header__nav__ul{
                     display: flex;
+                    
                     li{
                         margin-bottom: unset;
                         margin-right: 2rem;
                         position: relative;
                         &.active{
+                            background-color: rgb(250,250,250, .2);
+                        }
+                        &:hover{
                             background-color: rgb(250,250,250, .2);
                         }
                         &::after{
@@ -320,8 +364,26 @@
                         &:hover:after{
                             width: 100%;
                         }
-                        &:hover{
-                            background-color: rgb(250,250,250, .2);
+
+                        .li__head{
+                            position: relative;
+                            &::after{
+                                content: '';
+                                height: 5px;
+                                background-color: $clr-primary;
+                                position: absolute;
+                                left: 0;
+                                width: 0;
+                                top: 0;
+                                transition: 500ms;
+                            }
+                            &.active::after{
+                                width: 100%;
+                            }
+                            &:hover:after{
+                                width: 100%;
+                            }
+
                         }
                         
                         a{
@@ -332,8 +394,298 @@
                         i{
                             display: none;
                         }
+                        .about{  
+                            top: 15rem;
+                            visibility: hidden;
+                            opacity: 0;
+                            display: block;
+                            width: unset;
+                            width: 30rem;
+
+                            ul{
+                                padding: 1.5rem 0;
+                                li{    
+                                    padding: unset;
+                                    margin-bottom: .5rem;                                   
+                                 &::after{
+                                    content: '';
+                                    height: 100%;
+                                    background-color: #51BB88;
+                                    position: absolute;
+                                    left: 2.5rem;
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    width: 4px;
+                                    top: 0;
+                                    transition: 300ms;
+                                }
+                                &:hover:after{
+                                    left: 2rem;
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                                &:hover a{
+                                    padding-left: 2rem;
+                                    transition: 300ms;
+                                }
+                                    a{
+                                        color: $clr-dark;
+                                        font-weight: unset;
+                                        font-size: 1.5rem;
+                                        transition: 300ms;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .about{
+                            top: 6.1rem;
+                            visibility: visible;
+                            opacity: 1;
+
+                        }
+                        .tours{  
+                            top: 15rem;
+                            visibility: hidden;
+                            opacity: 0;
+                            display: block;
+                            width: unset;
+                            width: 30rem;
+
+                            ul{
+                                padding: 1.5rem 0;
+                                li{
+                                    padding: unset;
+                                    margin-bottom: .5rem;
+                                    &::after{
+                                        content: '';
+                                        height: 100%;
+                                        background-color: #51BB88;
+                                        position: absolute;
+                                        left: 2.5rem;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        width: 4px;
+                                        top: 0;
+                                        transition: 300ms;
+                                    }
+                                    &:hover:after{
+                                        left: 2rem;
+                                        visibility: visible;
+                                        opacity: 1;
+
+                                    }
+                                    &:hover a{
+                                        padding-left: 2rem;
+                                        transition: 300ms;
+                                    }
+                                    a{
+                                        color: $clr-dark;
+                                        font-weight: unset;
+                                        font-size: 1.5rem;
+                                        transition: 300ms;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .tours{
+                            top: 6.1rem;
+                            visibility: visible;
+                            opacity: 1;
+
+                        }
+                        .gallery{  
+                            top: 15rem;
+                            visibility: hidden;
+                            opacity: 0;
+                            display: block;
+                            width: unset;
+                            width: 30rem;
+
+                            ul{
+                                padding: 2rem 0;
+                                li{
+                                    padding: unset;
+                                    margin: 1.5rem ;
+                                    &::after{
+                                        content: '';
+                                        height: 100%;
+                                        background-color: #51BB88;
+                                        position: absolute;
+                                        left: 2.7rem;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        width: 4px;
+                                        top: 0;
+                                        transition: 300ms;
+                                    }
+                                    &:hover:after{
+                                        left: 2rem;
+                                        visibility: visible;
+                                        opacity: 1;
+
+                                    }
+                                    &:hover a{
+                                        padding-left: 2rem;
+                                        transition: 300ms;
+                                    }
+                                    a{
+                                        color: $clr-dark;
+                                        font-weight: unset;
+                                        font-size: 1.5rem;
+                                        transition: 300ms;
+                                    
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .gallery{
+                            top: 6.1rem;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                        .blog{  
+                            top: 15rem;
+                            visibility: hidden;
+                            opacity: 0;
+                            display: block;
+                            width: unset;
+                            width: 30rem;
+
+                            ul{
+                                padding: 2rem 0;
+                                li{
+                                    padding: unset;
+                                    margin: 1.5rem ;
+                                    &::after{
+                                        content: '';
+                                        height: 100%;
+                                        background-color: #51BB88;
+                                        position: absolute;
+                                        left: 2.7rem;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        width: 4px;
+                                        top: 0;
+                                        transition: 300ms;
+                                    }
+                                    &:hover:after{
+                                        left: 2rem;
+                                        visibility: visible;
+                                        opacity: 1;
+
+                                    }
+                                    &:hover a{
+                                        padding-left: 2rem;
+                                        transition: 300ms;
+                                    }
+                                    a{
+                                        color: $clr-dark;
+                                        font-weight: unset;
+                                        font-size: 1.5rem;
+                                        transition: 300ms;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .blog{
+                            top: 6.1rem;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+
+                        .page{
+                            top: 15rem;
+                            left: -69.5rem;
+                            visibility: hidden;
+                            opacity: 0;
+                            display: block;
+
+                            .page__content{
+                                display: flex;
+                                background-color: $clr-light;
+                                width: 120rem;
+                                @include grid(3,0);
+                                .group_page{
+                                    border-right: 1px solid rgba(0, 0, 0, .2);
+                                    margin: 4rem 0;
+                                    .page_head{
+                                        border-bottom: unset;
+                                        margin-left: 3.1rem;
+                                        h3{
+                                            color: $clr-dark;
+                                        }
+                                    }
+                                    ul{
+                                        height: 20rem;
+                                        @include grid(2,0);
+                                        li{
+                                            padding: unset;
+                                            margin:1rem ;
+                                            &::after{
+                                                content: '';
+                                                height: 100%;
+                                                background-color: #51BB88;
+                                                position: absolute;
+                                                left: 2.7rem;
+                                                visibility: hidden;
+                                                opacity: 0;
+                                                width: 4px;
+                                                top: 0;
+                                                transition: 300ms;
+                                            }
+                                            &:hover:after{
+                                                left: 2rem;
+                                                visibility: visible;
+                                                opacity: 1;
+        
+                                            }
+                                            &:hover a{
+                                                padding-left: 2rem;
+                                                transition: 300ms;
+                                            }
+                                            a{
+                                                color: $clr-dark;
+                                                font-weight: unset;
+                                                font-size: 1.5rem;
+                                                transition: 300ms;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                          .tourpic{
+                            .pagepic{
+                                display: flex;
+                                justify-content: space-evenly;
+                                .divpic{
+                                    height: 15rem;
+                                    width: 15rem;
+                                    overflow: hidden;
+                                    
+                                    img{
+                                       @include imgFit(18rem,18rem);
+                                       transition:300ms;
+
+                                    }
+                                    &:hover{
+                                        img{
+                                            @include imgFit(16rem,16rem);
+                                            transition: 300ms;
+                                        }
+                                    }
+                                }
+                            }
+                          }
+                        }
+                        &:hover .page{
+                            top: 6rem;
+                            visibility: visible;
+                            opacity: 1;
+                        }
                     }
-                
+
+
                     
                 }
                 .soc__icon{
@@ -363,88 +715,3 @@
 
 // BANNER
 
-.banner{
-    height: calc(100vh - 5.4rem);
-    background-image: url(../img/pic1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    &__wrapper{
-        height: 100%;
-        margin-top: 60%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__text{
-        color: $clr-light;
-        p{
-            font-size: 2rem;
-            font-weight: 600;
-            max-width: 45rem;
-        }
-        h2{
-            font-weight: normal;
-            font-size: 4.3rem;
-            margin: 2rem 0;
-        }
-        a{
-           padding: 1.5rem 2.5rem; 
-           position: relative;
-           
-           span{
-            z-index: 1;
-            position: relative;                    
-        }
-        &:hover{
-            color: $clr-light;
-            border: 2px solid #51BB88;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 19%;
-            width: 60%;
-            height: 100%;
-            background:#51BB88; 
-            visibility: hidden;
-            opacity: 0;
-            transition: 300ms;
-          }
-          &:hover:after{
-            width: 100%;
-            left: 0;
-            visibility: visible;
-            opacity: 1;
-          }
-        }
-    }
-    .sliderbtn{
-        span{
-            height: 1.5rem;
-            width: 1.5rem;
-            background-color: #C7C6C6;
-            display: block;
-            &.active{
-                background-color: $clr-primary;
-            }
-            &:nth-child(2)
-            {
-                margin: 1rem 0;
-            }
-        }
-    }
-    @include mediaQuery($break-lg){
-        height: 75rem;
-        &__wrapper{
-            margin-top: 25%;
-            p{
-                max-width: unset;
-            }
-            h2{
-                font-size: 6rem;
-            }
-    }
-}
-}

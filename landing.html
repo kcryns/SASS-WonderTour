@@ -7,6 +7,7 @@
     <title>Wonder-Tour</title>
     <link rel="stylesheet" href="./dist/scss/main.css">
     <script src="https://kit.fontawesome.com/c9dfde6fe6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
 <body>
 <header class="header">
@@ -29,23 +30,23 @@
                 </div>
                 <div class="header__nav">
                     <ul class="header__nav__ul">
-                        <li class="active"><a href="">Home</a></li>
-                        <li class="drop_down"><div class="li__head"><a href="">About</a><i class="fa-solid fa-chevron-down"></i></div>
-                            <div class="drop">
+                        <li class="drop_down active"><div class="li__head active"><a href="">Home</a></div></li>
+                        <li class="drop_down"><div class="li__head "><a href="">About</a><i class="fa-solid fa-chevron-down"></i></div>
+                            <div class="drop about">
                                 <ul>
                                     <li><a href="">Our Team</a></li>
                                 </ul>
                                 </div>
                         </li>
                         <li class="drop_down"><div class="li__head"><a href="">Our Tours</a><i class="fa-solid fa-chevron-down"></i></div>
-                            <div class="drop">
+                            <div class="drop tours">
                                 <ul>
                                     <li><a href="">Single Tour</a></li>
                                 </ul>
                                  </div>
                         </li>
                         <li class="drop_down"><div class="li__head"><a href="">Gallery</a><i class="fa-solid fa-chevron-down"></i></div>
-                            <div class="drop">
+                            <div class="drop gallery">
                                 <ul>
                                     <li><a href="">Grid Gallery</a></li>
                                     <li><a href="">Full width Gallery</a></li>
@@ -55,18 +56,64 @@
                                 </div>
                         </li>
                         <li class="drop_down"><div class="li__head"><a href="">Blog</a><i class="fa-solid fa-chevron-down"></i></div>
-                            <div class="drop">
+                            <div class="drop blog">
                                 <ul>
                                     <li><a href="">Classic Blog</a></li>
-                                    <li><a href=""></a>Grid Blog</li>
-                                    <li><a href=""></a>Grid Blog 2</li>
-                                    <li><a href=""></a>Grid Blog 3</li>
-                                    <li><a href=""></a>Blog Post</li>
+                                    <li><a href="">Grid Blog</a></li>
+                                    <li><a href="">Grid Blog 2</a></li>
+                                    <li><a href="">Grid Blog 3</a></li>
+                                    <li><a href="">Blog Post</a></li>
                                 </ul>
                                 </div> 
                         </li>
-                        <li><a href="">Contact Us</a></li>
-                        <li class="drop_down"><div class="li__head"><a href="">Pages</a><i class="fa-solid fa-chevron-down"></i></div></li>
+                        <li><div><a href="">Contact Us</a></div></li>
+                        <li class="drop_down"><div class="li__head"><a href="">Pages</a><i class="fa-solid fa-chevron-down"></i></div>
+                                    <div class="drop page">
+                                        <div class="page__content">
+                                            <div class="group_page">
+                                                <div class="page_head">
+                                                    <h3>Element</h3>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Typography</a></li>
+                                                    <li><a href="">Buttons</a></li>
+                                                    <li><a href="">Forms</a></li>
+                                                    <li><a href="">Tabs and Accordion</a></li>
+                                                    <li><a href="">Counters</a></li>
+                                                    <li><a href="">Icon with Text</a></li>
+                                                    <li><a href="">Progress Bars</a></li>
+                                                    <li><a href="">Grid System</a></li>
+                                                    <li><a href="">Privacy Policy</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="group_page">
+                                                <div class="page_head">
+                                                    <h3>Additional pages</h3>
+                                                </div>
+                                                <ul>
+                                                    <li><a href="">Service</a></li>
+                                                    <li><a href="">Testimonial</a></li>
+                                                    <li><a href="">404 Page</a></li>
+                                                    <li><a href="">503 Page</a></li>
+                                                    <li><a href="">Pricing</a></li>
+                                                    <li><a href="">Comming Soon</a></li>
+                                                    <li><a href="">Contact Us 2</a></li>
+                                                    <li><a href="">FAQ</a></li>
+                                                    <li><a href="">Search Result</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="group_page tourpic">
+                                                <div class="page_head">
+                                                    <h3>Tours</h3>
+                                                </div>
+                                                <div class="pagepic">
+                                                <div class="divpic"><img src="./dist/img/tn1.jpg" alt=""></div>
+                                                <div class="divpic"><img src="./dist/img/tn2.jpg" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>   
+                        </li>
                     </ul>
                 </div>
                 </div>
@@ -96,21 +143,58 @@
     </div>
 </header>
 <section class="banner">
-    <div class="container">
-        <div class="banner__wrapper">
-            <div class="banner__text">
-                <p>ENJOY THE BEST DESTINATION WITH OUR TRAVEL AGENCY</p>
-                <h2>Explore <strong>The World</strong></h2>
-                <a href="" class="btn"><span>Get in touch</span></a>
-            </div>
-            <div class="sliderbtn">
-                <span class="active"></span>
-                <span></span>
-                <span></span>
+<div class="banner__banner">
+    <div class="main__banner">
+        <div class="container">
+            <div class="main__banner__wrapper">
+                <div class="main__banner__text">
+                    <p>ENJOY THE BEST DESTINATION WITH OUR TRAVEL AGENCY</p>
+                    <h2>Explore <strong>The World</strong></h2>
+                    <a href="" class="btn"><span>Get in touch</span></a>
+                </div>
+                <div class="sliderbtn">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>
+    <div class="main__banner" id="two">
+        <div class="container">
+            <div class="main__banner__wrapper">
+                <div class="main__banner__text">
+                    <p>ENJOY THE BEST DESTINATION WITH OUR TRAVEL AGENCY</p>
+                    <h2>Explore <strong>The World</strong></h2>
+                    <a href="" class="btn"><span>Get in touch</span></a>
+                </div>
+                <div class="sliderbtn">
+                    <span></span>
+                    <span class="active"></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main__banner" id="three">
+        <div class="container">
+            <div class="main__banner__wrapper">
+                <div class="main__banner__text">
+                    <p>ENJOY THE BEST DESTINATION WITH OUR TRAVEL AGENCY</p>
+                    <h2>Explore <strong>The World</strong></h2>
+                    <a href="" class="btn"><span>Get in touch</span></a>
+                </div>
+                <div class="sliderbtn">
+                    <span></span>
+                    <span></span>
+                    <span  class="active"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script src="./dist/script.js"></script>
 </body>
 </html>
