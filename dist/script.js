@@ -28,42 +28,13 @@ toggle__burger.classList.remove("open");
 //     })
 // })
 const drop_down = document.querySelectorAll(".drop_down .li__head")
-drop_down.forEach((dropd) => {
-    dropd.addEventListener("click", () => {
-     const content = dropd.nextElementSibling;
-     const icon = dropd.querySelector("i");
-     const head = dropd.parentElement;
-     if (head.classList.contains("active")){
-        content.classList.remove("open");
-        icon.classList.remove("open");
-        head.classList.remove("active");
-
-     } else{
-        yow();
-        content.classList.toggle("open");
-        icon.classList.toggle("open");
-        head.classList.toggle("active");
-     }
-    });
-});
-
-const yow = () => {
     drop_down.forEach((dropd) => {
-        // dropd.addEventListener("click", () => {
-            // console.log(dropd.nextElementSibling)
-            // dropd.nextElementSibling.classList.remove("open");
-            // dropd.querySelector("i").classList.remove("open");
-            // dropd.parentElement.classList.remove("active");
-        // });
-        
-        // console.log(dropd)
-        // const head = dropd.nextElementSibling;
-        // console.log(head)
-       
+        dropd.addEventListener("click", () => {
+            dropd.nextElementSibling.classList.toggle("open");
+            dropd.querySelector("i").classList.toggle("open");
+            dropd.parentElement.classList.toggle("active");
+        }); 
     });
-    // console.log(drop_down);
-}
-
 
 
 var slider = tns({
@@ -78,3 +49,26 @@ var slider = tns({
         autoplayButton:false,
     });
     
+const starnav = document.querySelectorAll(".star__nav__link");
+const starcontent = document.querySelectorAll(".page__content");
+starnav.forEach((star) => {
+  star.addEventListener("click", () => {
+      removeActiveStar();
+      star.classList.add("active");
+      const activeContent= document.querySelector(`#${star.id}-content`);
+      removeActiveContent();
+      activeContent.classList.add("active");
+})
+
+});
+
+function removeActiveStar(){
+  starnav.forEach((star) => {
+    star.classList.remove("active");
+  })
+}
+function removeActiveContent(){
+  starcontent.forEach((star) => {
+    star.classList.remove("active");
+  })
+}
