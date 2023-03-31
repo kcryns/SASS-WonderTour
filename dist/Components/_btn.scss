@@ -42,3 +42,13 @@
     padding: 1.5rem 3.5rem;
     
 }
+.bghoverdark{
+    background-color: $clr-primary;
+    transition: 300ms;
+    border: 2px solid $clr-primary;
+    &:hover{
+        background-color: #151515;
+        border: 2px solid #151515;
+        transition: 300ms;
+    }
+}

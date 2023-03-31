@@ -48,6 +48,37 @@ var slider = tns({
         autoplayPosition: false,
         autoplayButton:false,
     });
+
+    var slider = tns({
+          container: '.blog__card',
+          items: 1,
+          slideBy: 'page',
+          autoplay: false,
+          axis: "horizontal",
+          controls: false,
+          nav: true,
+          autoplayPosition: false,
+          autoplayButton:false,
+          responsive:{
+            970:{
+                items:2,
+                autoplay: true,
+            }
+          }
+      });
+
+      var slider = tns({
+            container: '.gallery__imgs',
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            axis: "horizontal",
+            controls: false,
+            nav: true,
+            autoplayPosition: false,
+            autoplayButton:false,
+            autoWidth:true,
+        });
     
 const starnav = document.querySelectorAll(".star__nav__link");
 const starcontent = document.querySelectorAll(".page__content");
