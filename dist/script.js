@@ -83,9 +83,8 @@ var slider = tns({
             container: '.gallery__imgs',
             items: 1,
             slideBy: 'page',
-            autoplay: true,
+            autoplay: false,
             axis: "horizontal",
-            controls: false,
             nav: true,
             autoplayPosition: false,
             autoplayButton:false,
@@ -95,6 +94,9 @@ var slider = tns({
                   items:6,
                   slideBy: 1,
                   autoplay: true,
+                  controls: true,
+                  controlsText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                  
               }
             }
         });

@@ -1182,6 +1182,9 @@ body a {
 .blogs .tns-nav button:hover {
   background: #51BB88;
 }
+.blogs .tns-nav .tns-nav-active {
+  background: #01B3A7;
+}
 @media screen and (min-width: 970px) {
   .blogs {
     margin-bottom: 5rem;
@@ -1317,9 +1320,11 @@ body a {
   color: #ffffff;
   cursor: pointer;
   z-index: 99;
+  transition: 300ms;
 }
 .gallery__imgs .pics i:hover {
   opacity: 0.5;
+  transition: 300ms;
 }
 .gallery__imgs .pics img {
   width: 50.3rem;
@@ -1355,13 +1360,16 @@ body a {
 .gallery .tns-nav button:hover {
   background: #151515;
 }
+.gallery .tns-nav .tns-nav-active {
+  background: #01B3A7;
+}
 @media screen and (min-width: 970px) {
   .gallery .container {
     max-width: unset;
     padding: unset;
   }
   .gallery__wrapper {
-    max-width: 180rem;
+    max-width: 175rem;
     margin: 0 auto;
   }
   .gallery__imgs {
@@ -1433,16 +1441,69 @@ body a {
   }
   .gallery .tns-controls {
     position: absolute;
-    top: 10rem;
-    width: 100%;
+    left: -4.5rem;
+    top: 8rem;
+    width: 106%;
+    height: 10rem;
     display: flex;
     justify-content: space-between;
-    z-index: 999;
   }
   .gallery .tns-controls button {
-    color: #151515;
-    font-size: 2.5rem;
+    display: unset;
     border: none;
+    background-color: transparent;
+  }
+  .gallery .tns-controls button i {
+    color: #c7c7c7;
+    font-size: 2.1rem;
+    border: none;
+  }
+  .gallery .tns-controls button .fa-angle-left {
+    position: relative;
+    transition: 300ms;
+  }
+  .gallery .tns-controls button .fa-angle-left::after {
+    position: absolute;
+    content: "";
+    top: 0.8rem;
+    width: 2.5rem;
+    height: 3px;
+    background-color: #c7c7c7;
+    transition: 300ms;
+  }
+  .gallery .tns-controls button .fa-angle-left:hover {
+    transform: translateX(-0.5rem);
+    color: #01B3A7;
+    transition: 300ms;
+  }
+  .gallery .tns-controls button .fa-angle-left:hover:after {
+    transform: translateX(1.5rem);
+    background-color: #01B3A7;
+    transition: 300ms;
+  }
+  .gallery .tns-controls button .fa-angle-right {
+    position: relative;
+    transition: 300ms;
+  }
+  .gallery .tns-controls button .fa-angle-right::after {
+    position: absolute;
+    content: "";
+    top: 0.8rem;
+    width: 2.5rem;
+    right: 1.3rem;
+    height: 3px;
+    background-color: #c7c7c7;
+    transition: 300ms;
+  }
+  .gallery .tns-controls button .fa-angle-right:hover {
+    transform: translateX(0.5rem);
+    color: #01B3A7;
+    transition: 300ms;
+  }
+  .gallery .tns-controls button .fa-angle-right:hover:after {
+    transform: translateX(-1.5rem);
+    background-color: #01B3A7;
+    transition: 300ms;
   }
 }
 

@@ -1133,6 +1133,10 @@ padding-top: 15rem;
          }
       
      }
+
+     .tns-nav .tns-nav-active{
+        background: $clr-primary;
+     }
     @include mediaQuery($break-lg){
         margin-bottom: 5rem;
         &__wrapper{
@@ -1271,8 +1275,10 @@ padding-top: 15rem;
                 color: $clr-light;
                 cursor: pointer;
                 z-index: 99;
+                transition: 300ms;
                 &:hover{
                     opacity: .5;
+                    transition: 300ms;
                 }
             }
             img{
@@ -1307,13 +1313,16 @@ padding-top: 15rem;
          }
       
      }
+     .tns-nav .tns-nav-active{
+        background: $clr-primary;
+     }
      @include mediaQuery($break-lg){
         .container{
             max-width: unset;
             padding: unset;
         }
         &__wrapper{
-            max-width: 180rem;
+            max-width: 175rem;
             margin: 0 auto;
             
         }
@@ -1384,16 +1393,69 @@ padding-top: 15rem;
         }
             .tns-controls{
                 position: absolute;
-                top: 10rem;
-                width: 100%;
+                left: -4.5rem;
+                top: 8rem;
+                width: 106%;
+                height: 10rem;
                 display: flex;
                 justify-content: space-between;
-                z-index: 999;
                 button{
-                    color: #151515;
-                    font-size: 2.5rem;
+                    display: unset;
                     border: none;
-                    
+                    background-color: transparent;
+                  i{
+                    color: #c7c7c7;
+                    font-size: 2.1rem;
+                    border: none;
+                   
+                  }
+                  .fa-angle-left{
+                    position: relative;
+                    transition: 300ms;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        top: .8rem;
+                        width: 2.5rem;
+                        height: 3px;
+                        background-color: #c7c7c7;   
+                        transition: 300ms;
+                    }
+                    &:hover{
+                        transform: translateX(-.5rem);
+                        color: $clr-primary;
+                        transition: 300ms;
+                        &:after{
+                            transform: translateX(1.5rem);
+                            background-color: $clr-primary;
+                            transition: 300ms;
+                        }
+                    }
+                }
+                .fa-angle-right{
+                    position: relative;
+                    transition: 300ms;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        top: .8rem;
+                        width: 2.5rem;
+                        right: 1.3rem;
+                        height: 3px;
+                        background-color: #c7c7c7;   
+                        transition: 300ms;
+                    }
+                    &:hover{
+                        transform: translateX(.5rem);
+                        color: $clr-primary;
+                        transition: 300ms;
+                        &:after{
+                            transform: translateX(-1.5rem);
+                            background-color: $clr-primary;
+                            transition: 300ms;
+                        }
+                    }
+                }
                 }
             }
 
