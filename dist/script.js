@@ -1,3 +1,15 @@
+const btop =document.querySelector(".backtotop") ;
+window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset);
+  if(window.pageYOffset >=200){
+    btop.classList.add("show")
+  }
+  else{
+    btop.classList.remove("show")
+  }
+})
+
+
 const toggle__burger = document.querySelector(".toggle__burger");
 const navigation = document.querySelector(".navigation");
 const toggle__dot = document.querySelector(".toggle__dot");
@@ -77,7 +89,14 @@ var slider = tns({
             nav: true,
             autoplayPosition: false,
             autoplayButton:false,
-            autoWidth:true,
+            responsive:{
+              970:{
+                  nav: false,
+                  items:6,
+                  slideBy: 1,
+                  autoplay: true,
+              }
+            }
         });
     
 const starnav = document.querySelectorAll(".star__nav__link");
